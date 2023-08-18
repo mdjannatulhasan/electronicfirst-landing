@@ -4,15 +4,22 @@
 html * {
 	margin: 0;
 	padding: 0;
+	font-family: "Barlow", sans-serif;
 }
 .container-fluid {
 	padding: 0 20px;
 }
-.hero {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url($hero-bg);
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-
-	nav {
-		padding: 10px 20px;
-	}
+.container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 20px;
 }
+
+.flex {
+	@include flex(25px);
+}
+
+@import "colors";
+@import "breakpoints";
+@import "components/hero/hero";
+@import "components/percentBadge";
