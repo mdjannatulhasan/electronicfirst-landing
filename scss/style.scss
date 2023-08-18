@@ -6,20 +6,13 @@ html * {
 	padding: 0;
 	font-family: "Barlow", sans-serif;
 }
-.container-fluid {
-	padding: 0 20px;
-}
-.container {
-	max-width: 1200px;
-	margin: auto;
-	padding: 0 20px;
-}
-
-.flex {
-	@include flex(25px);
+body {
+	background-color: #272727;
 }
 
 @import "colors";
 @import "breakpoints";
+@import "utility";
+@import "grid";
 @import "components/hero/hero";
 @import "components/percentBadge";

@@ -4,14 +4,23 @@ html * {
   font-family: "Barlow", sans-serif;
 }
 
+body {
+  background-color: #272727;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
 .container-fluid {
   padding: 0 20px;
 }
 
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .flex {
@@ -19,19 +28,6 @@ html * {
   align-items: center;
   gap: 25px;
 }
-
-.text-primary {
-  color: #ff5400;
-}
-
-.text-secondary {
-  color: #ff7507;
-}
-
-.text-white {
-  color: #ffffff;
-}
-
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("../assets/images/Starfield_LargeHero_Showcase.webp");
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
