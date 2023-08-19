@@ -1,11 +1,10 @@
 .hero {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url($hero-bg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url($hero-bg);
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-	background-position: center center;
+	background-position: bottom center;
 
-	nav {
-		padding: 10px 20px;
-	}
+	@import "nav";
+
 	.hero-body {
 		padding: 80px 0 120px;
 	}

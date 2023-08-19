@@ -2,6 +2,7 @@ html * {
   margin: 0;
   padding: 0;
   font-family: "Barlow", sans-serif;
+  text-decoration: none;
 }
 
 body {
@@ -20,7 +21,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
 }
 
 .flex {
@@ -28,13 +28,86 @@ body {
   align-items: center;
   gap: 25px;
 }
+
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("../assets/images/Starfield_LargeHero_Showcase.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../assets/images/Starfield_LargeHero_Showcase.webp");
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-  background-position: center center;
+  background-position: bottom center;
 }
 .hero nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  color: #ffffff;
+  background: transparent;
+}
+.hero nav .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+.hero nav .top-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.hero nav .top-menu a {
+  color: #9d9ea0;
+  font-weight: 500;
+  transition: all ease 300ms;
+}
+.hero nav .top-menu a:hover {
+  color: #ffffff;
+}
+.hero nav .menu-with-search {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  background-color: rgba(41, 50, 55, 0.8274509804);
   padding: 10px 20px;
+  border-radius: 50px;
+  position: relative;
+}
+.hero nav .menu-with-search .parent-name {
+  padding: 0 8px 0 10px;
+}
+.hero nav .menu-with-search .menu-item {
+  display: block;
+  padding: 10px;
+}
+.hero nav .menu-with-search .menu-item a {
+  cursor: pointer;
+}
+.hero nav .menu-with-search .parent {
+  display: flex;
+  align-items: center;
+}
+.hero nav .menu-with-search .parent i {
+  font-size: 16px;
+}
+.hero nav .menu-with-search .parent .fa-chevron-down {
+  font-size: 10px;
+  padding-top: 5px;
+  color: #9d9ea0;
+}
+.hero nav .menu-with-search .parent img {
+  max-width: 20px;
+}
+.hero nav .menu-with-search .submenu {
+  position: absolute;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.281);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  top: 125%;
+  left: 0;
+}
+.hero nav .menu-with-search .submenu img {
+  max-width: 30px;
 }
 .hero .hero-body {
   padding: 80px 0 120px;
