@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const searchContainer = document.querySelector(".search");
 	const closeButton = document.querySelector(".close");
 
-	searchIcon.addEventListener("click", function () {
+	searchContainer.addEventListener("click", function () {
 		searchContainer.classList.add("expanded");
 		searchIcon.style.display = "none";
 		closeButton.classList.add("opened");

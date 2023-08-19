@@ -147,6 +147,7 @@ body {
   background: linear-gradient(rgb(251, 68, 69), rgb(255, 119, 5));
   transition: width 0.3s ease;
   overflow: hidden;
+  cursor: pointer;
 }
 .hero nav .menu-with-search .search .search-icon {
   display: block;
@@ -154,6 +155,7 @@ body {
 }
 .hero nav .menu-with-search .search.expanded {
   width: 100%;
+  cursor: auto;
 }
 .hero nav .menu-with-search .search.expanded .search-icon {
   display: none;
@@ -183,6 +185,7 @@ body {
   border-color: transparent;
   color: #ffffff;
   font-weight: 500;
+  cursor: pointer;
 }
 .hero nav .menu-with-search .close {
   background-color: transparent;

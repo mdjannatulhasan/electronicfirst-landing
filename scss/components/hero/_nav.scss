@@ -80,6 +80,7 @@ nav {
 			background: linear-gradient(rgba(251, 68, 69, 1), rgba(255, 119, 5, 1));
 			transition: width 0.3s ease;
 			overflow: hidden;
+			cursor: pointer;
 
 			.search-icon {
 				display: block;
@@ -88,6 +89,7 @@ nav {
 
 			&.expanded {
 				width: 100%;
+				cursor: auto;
 
 				.search-icon {
 					display: none;
@@ -121,6 +123,7 @@ nav {
 					border-color: transparent;
 					color: #ffffff;
 					font-weight: 500;
+					cursor: pointer;
 				}
 			}
 		}
