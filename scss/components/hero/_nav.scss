@@ -1,8 +1,8 @@
 nav {
 	display: flex;
-	align-items: center;
+	// align-items: center;
 	justify-content: space-between;
-	padding: 15px 20px;
+	padding: 15px 0px;
 	color: #ffffff;
 	background: transparent;
 
@@ -80,9 +80,30 @@ nav {
 			border-radius: $border-radius;
 			top: 125%;
 			left: 0;
-			img {
-				max-width: 30px;
+			display: none;
+			transition: all ease 300ms;
+
+			.child {
+				@include flex(10px);
+				border-radius: 50px;
+				padding: 5px;
+				background-color: rgba(255, 255, 255, 0);
+				transition: all ease 300ms;
+
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.196);
+				}
+				img {
+					max-width: 40px;
+				}
 			}
 		}
+	}
+
+	a.not-active * {
+		color: #747573 !important;
+	}
+	.search a * {
+		color: #ffffff !important;
 	}
 }

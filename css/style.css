@@ -29,6 +29,41 @@ body {
   gap: 25px;
 }
 
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.gap-1 > * {
+  padding: 10px;
+}
+
+.gap-1 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+@media (min-width: 1200px) {
+  .col-xl-4 {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 33.3333333333%;
+  }
+}
+@media (min-width: 960px) {
+  .col-lg-4 {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 33.3333333333%;
+  }
+}
+@media (min-width: 720px) {
+  .col-md-4 {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 33.3333333333%;
+  }
+}
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../assets/images/Starfield_LargeHero_Showcase.webp");
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
@@ -36,9 +71,8 @@ body {
 }
 .hero nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 15px 0px;
   color: #ffffff;
   background: transparent;
 }
@@ -105,9 +139,29 @@ body {
   border-radius: 6px;
   top: 125%;
   left: 0;
+  display: none;
+  transition: all ease 300ms;
 }
-.hero nav .menu-with-search .submenu img {
-  max-width: 30px;
+.hero nav .menu-with-search .submenu .child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all ease 300ms;
+}
+.hero nav .menu-with-search .submenu .child:hover {
+  background-color: rgba(255, 255, 255, 0.196);
+}
+.hero nav .menu-with-search .submenu .child img {
+  max-width: 40px;
+}
+.hero nav a.not-active * {
+  color: #747573 !important;
+}
+.hero nav .search a * {
+  color: #ffffff !important;
 }
 .hero .hero-body {
   padding: 80px 0 120px;
@@ -129,13 +183,13 @@ body {
   margin: 13px 0 22px;
   line-height: 1.1em;
 }
-@media (max-width: 960px) {
+@media (min-width: 960px) {
   .hero h1.heading {
     font-size: 2.5rem;
     line-height: 1.2em;
   }
 }
-@media (max-width: 720px) {
+@media (min-width: 720px) {
   .hero h1.heading {
     font-size: 2rem;
     line-height: 1.2em;
