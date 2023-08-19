@@ -3,13 +3,17 @@
 $grid-columns: 12;
 $grid-gaps: (
 	"0": 0,
-	"1": 10px,
-	"2": 15px,
-	"3": 20px,
-	"4": 25px,
-	"5": 30px,
-	"6": 35px,
+	"1": 5px,
+	"2": 10px,
+	"3": 15px,
+	"4": 20px,
+	"5": 25px,
+	"6": 30px,
+	"7": 35px,
 );
+.mt-2 {
+	margin-top: 10px;
+}
 $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 .container-fluid {
@@ -52,27 +56,9 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 	}
 }
 
-@include xl {
+@include xs {
 	@for $i from 1 through $grid-columns {
-		.col-xl-#{$i} {
-			box-sizing: border-box;
-			flex-grow: 0;
-			width: math.div($i * 100%, $grid-columns);
-		}
-	}
-}
-@include lg {
-	@for $i from 1 through $grid-columns {
-		.col-lg-#{$i} {
-			box-sizing: border-box;
-			flex-grow: 0;
-			width: math.div($i * 100%, $grid-columns);
-		}
-	}
-}
-@include md {
-	@for $i from 1 through $grid-columns {
-		.col-md-#{$i} {
+		.col-xs-#{$i} {
 			box-sizing: border-box;
 			flex-grow: 0;
 			width: math.div($i * 100%, $grid-columns);
@@ -88,9 +74,27 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 		}
 	}
 }
-@include xs {
+@include md {
 	@for $i from 1 through $grid-columns {
-		.col-xs-#{$i} {
+		.col-md-#{$i} {
+			box-sizing: border-box;
+			flex-grow: 0;
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}
+@include lg {
+	@for $i from 1 through $grid-columns {
+		.col-lg-#{$i} {
+			box-sizing: border-box;
+			flex-grow: 0;
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}
+@include xl {
+	@for $i from 1 through $grid-columns {
+		.col-xl-#{$i} {
 			box-sizing: border-box;
 			flex-grow: 0;
 			width: math.div($i * 100%, $grid-columns);
