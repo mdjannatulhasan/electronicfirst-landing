@@ -32,6 +32,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 .row {
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
 }
 
 @each $key, $val in $grid-gaps {

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const parentLinks = document.querySelectorAll(".parent");
+	const overlay = document.querySelector(".overlay");
 
 	parentLinks.forEach(function (parentLink) {
 		parentLink.addEventListener("click", function () {
@@ -7,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				parentLinks.forEach(function (link) {
 					link.classList.remove("active", "not-active");
 				});
-
+				overlay.classList.remove("show");
 				const submenus = document.querySelectorAll(".submenu");
 				submenus.forEach(function (submenu) {
 					submenu.style.opacity = "0";
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					link.classList.remove("active");
 					link.classList.add("not-active");
 				});
-
+				overlay.classList.add("show");
 				parentLink.classList.remove("not-active");
 				parentLink.classList.add("active");
 

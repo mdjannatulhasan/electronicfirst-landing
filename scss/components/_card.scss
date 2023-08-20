@@ -1,0 +1,44 @@
+.card {
+	position: relative;
+	.card-image {
+		position: relative;
+	}
+	.card-image img {
+		width: 100%;
+		border-radius: $border-radius;
+		max-height: 214px;
+		object-fit: cover;
+	}
+	.card-percent-badge {
+		@extend .percent-badge;
+		position: absolute;
+		left: -4px;
+		bottom: -4px;
+	}
+	.card-body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 13px;
+		color: #ffffff;
+
+		.title-and-chip {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			.title {
+				font-size: 18px;
+			}
+			.chip {
+				border: 1px solid #ffffff79;
+				border-radius: $border-radius;
+				color: #ffffff79;
+				padding: 4px 8px;
+				font-size: 12px;
+			}
+		}
+		.card-price {
+			font-size: 24px;
+		}
+	}
+}

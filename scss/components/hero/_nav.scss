@@ -6,6 +6,10 @@ nav {
 	color: #ffffff;
 	background: transparent;
 
+	.logo {
+		position: relative;
+		z-index: 100;
+	}
 	.menu {
 		display: flex;
 		flex-direction: column;
@@ -39,7 +43,7 @@ nav {
 		padding: 10px 70px 10px 20px;
 		border-radius: 50px;
 		position: relative;
-
+		z-index: 5;
 		.parent-name {
 			padding: 0 8px 0 10px;
 		}
@@ -223,7 +227,8 @@ nav {
 		display: flex;
 		align-items: center;
 		gap: 20px;
-
+		position: relative;
+		z-index: 5;
 		.cart {
 			color: #ffffff;
 		}

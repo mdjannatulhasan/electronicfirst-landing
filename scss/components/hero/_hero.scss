@@ -1,11 +1,20 @@
 .hero {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url($hero-bg);
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
 	background-position: bottom center;
 	background-size: cover;
 	background-repeat: no-repeat;
-
+	position: relative;
 	@import "nav";
+
+	.clipped {
+		background-color: #272727;
+		clip-path: polygon(0 0, 100% 81%, 100% 100%, 0% 100%);
+		position: absolute;
+		bottom: -1px;
+		height: 60px;
+		width: 100%;
+	}
 
 	.hero-body {
 		padding: 80px 0 220px;
@@ -15,9 +24,19 @@
 		display: inline-block;
 		padding: 5px 12px;
 		color: #e4e4e4;
-		font-weight: 700;
-		font-size: 0.9rem;
+		font-weight: 600;
+		// font-size: 0.9rem;
 		border-radius: $border-radius;
+
+		@include md {
+			font-size: 0.9rem;
+		}
+		@include sm {
+			font-size: 0.8rem;
+		}
+		@include xs {
+			font-size: 0.8rem;
+		}
 	}
 	h1.heading {
 		color: white;
@@ -25,6 +44,14 @@
 		max-width: 600px;
 		margin: 13px 0 22px;
 
+		@include xs {
+			font-size: 2rem;
+			line-height: 1.2em;
+		}
+		@include sm {
+			font-size: 2rem;
+			line-height: 1.2em;
+		}
 		@include md {
 			font-size: 2rem;
 			line-height: 1.2em;
@@ -43,5 +70,21 @@
 		font-size: 3.3rem;
 		line-height: 1em;
 		margin-top: -5px;
+
+		@include xs {
+			font-size: 2rem;
+		}
+		@include sm {
+			font-size: 2rem;
+		}
+		@include md {
+			font-size: 2.3rem;
+		}
+		@include lg {
+			font-size: 2.8rem;
+		}
+		@include xl {
+			font-size: 3.3rem;
+		}
 	}
 }
