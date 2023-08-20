@@ -1,0 +1,65 @@
+%span {
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+}
+$color: #ffffffca;
+.early-access {
+	display: inline-block;
+	color: $color;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	background-color: rgba(0, 0, 0, 0.493);
+	padding: 10px 22px;
+
+	@include xs {
+		position: relative;
+		left: unset;
+		margin-top: 20px;
+		font-size: 16px;
+	}
+	@include sm {
+		position: relative;
+		left: unset;
+		margin-top: 20px;
+		font-size: 16px;
+	}
+	@include lg {
+		position: absolute;
+		font-size: 22px;
+		margin-top: 20px;
+		font-size: 16px;
+		left: 65%;
+	}
+
+	span:nth-child(1) {
+		@extend %span;
+		top: -3px;
+		left: -3px;
+		border-top: 3px solid $color;
+		border-left: 3px solid $color;
+	}
+	span:nth-child(2) {
+		@extend %span;
+		top: -3px;
+		right: -3px;
+		border-top: 3px solid $color;
+		border-right: 3px solid $color;
+	}
+	span:nth-child(3) {
+		@extend %span;
+		bottom: -3px;
+		left: -3px;
+		border-bottom: 3px solid $color;
+		border-left: 3px solid $color;
+	}
+	span:nth-child(4) {
+		@extend %span;
+		bottom: -3px;
+		right: -3px;
+		border-bottom: 3px solid $color;
+		border-right: 3px solid $color;
+	}
+}
