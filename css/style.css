@@ -296,6 +296,7 @@
   color: #ffffff;
 }
 .hero nav .mobile-menu button {
+  cursor: pointer;
   background-color: transparent;
   border-color: transparent;
   color: #ffffff;
