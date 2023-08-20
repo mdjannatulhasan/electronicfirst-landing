@@ -223,6 +223,7 @@
 }
 .hero nav .menu-with-search .submenu .row {
   padding: 0 10px;
+  justify-content: flex-start;
 }
 .hero nav .menu-with-search .submenu .title-bar {
   background-color: rgba(0, 0, 0, 0.2666666667);
