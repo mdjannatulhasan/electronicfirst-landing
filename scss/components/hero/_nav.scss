@@ -115,6 +115,11 @@ nav {
 					background-color: transparent;
 					border-color: transparent;
 					flex-grow: 1;
+					outline: none !important;
+					color: #ffffff;
+					&:focus-visible {
+						outline: none;
+					}
 				}
 
 				::placeholder {

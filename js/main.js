@@ -1,3 +1,4 @@
+import "../scss/style.scss";
 document.addEventListener("DOMContentLoaded", function () {
 	const parentLinks = document.querySelectorAll(".parent");
 	const overlay = document.querySelector(".overlay");
@@ -68,6 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	const closeButton = document.querySelector(".close");
 
 	searchContainer.addEventListener("click", function () {
+		parentLinks.forEach(function (link) {
+			link.classList.remove("active", "not-active");
+		});
+		document.querySelectorAll(".submenu").forEach(function (submenu) {
+			submenu.style.opacity = "0";
+			submenu.style.top = "100%";
+		});
 		searchContainer.classList.add("expanded");
 		searchIcon.style.display = "none";
 		closeButton.classList.add("opened");
